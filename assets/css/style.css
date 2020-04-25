@@ -1488,6 +1488,173 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Nutritionist
+--------------------------------------------------------------*/
+.nutritionist {
+  padding-bottom: 30px;
+}
+
+.nutritionist .info-box {
+  color: #444;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 20px 0 30px 0;
+  margin-bottom: 30px;
+}
+
+.nutritionist .info-box i {
+  font-size: 32px;
+  color: #68A4C4;
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px dotted #a2cce3;
+}
+
+.nutritionist .info-box h3 {
+  font-size: 20px;
+  color: #666;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.nutritionist .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.nutritionist .appointment-form {
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.nutritionist .appointment-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.nutritionist .appointment-form input, .contact .appointment-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.nutritionist .appointment-form input::focus, .contact .appointment-form textarea::focus {
+  background-color: #68A4C4;
+}
+
+.nutritionist .appointment-form input {
+  padding: 20px 15px;
+}
+
+.nutritionist .appointment-form textarea {
+  padding: 12px 15px;
+}
+
+.nutritionist .appointment-form button[name="nutritionist-button"] {
+  background: #68A4C4;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.nutritionist .appointment-form button[name="nutritionist-button"]:hover {
+  background: #8dbad2;
+}
+
+
+/*--------------------------------------------------------------
+# Massage
+--------------------------------------------------------------*/
+.massage {
+  padding-bottom: 30px;
+}
+
+.massage .info-box {
+  color: #444;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 20px 0 30px 0;
+  margin-bottom: 30px;
+}
+
+.massage .info-box i {
+  font-size: 32px;
+  color: #68A4C4;
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px dotted #a2cce3;
+}
+
+.massage .info-box h3 {
+  font-size: 20px;
+  color: #666;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.massage .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.massage .appointment-form {
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.massage .appointment-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.massage .appointment-form input, .contact .appointment-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.massage .appointment-form input::focus, .contact .appointment-form textarea::focus {
+  background-color: #68A4C4;
+}
+
+.massage .appointment-form input {
+  padding: 20px 15px;
+}
+
+.massage .appointment-form textarea {
+  padding: 12px 15px;
+}
+
+.massage .appointment-form button[name="massage-button"] {
+  background: #68A4C4;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.massage .appointment-form button[name="massage-button"]:hover {
+  background: #8dbad2;
+}
+
+#dateMassage{width:180px; margin: 0 20px 20px 20px;}
+#dateMassage > span:hover{cursor: pointer;}
+
+
+/*--------------------------------------------------------------
 # Map
 --------------------------------------------------------------*/
 .map {
