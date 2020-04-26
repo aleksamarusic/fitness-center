@@ -24,6 +24,10 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
+  <!-- Date-Picker Plugin -->
+  <link href="assets/css/the-datepicker.css" rel="stylesheet">
+  <script src="assets/js//the-datepicker.js"></script>
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -81,38 +85,32 @@
       <div class="container">
         <div class="row">
           <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
-            <form action="" id="formNutritionist" class="appointment-form">
+            <form id="formNutritionist" class="appointment-form" onsubmit="printPDF('Nutritionist', 'Nutricionista')">
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="nameNutritionist" class="form-control" id="nameNutritionist" placeholder="Vaše ime" data-rule="minlen:3" data-msg="Unesite bar 3 karaktera" />
-                  <div class="validate"></div>
+                  <input type="text" name="nameNutritionist" class="form-control" id="nameNutritionist" placeholder="Vaše ime" required minlength="3" maxlength="50" oninvalid="this.setCustomValidity('Unesite Vaše ime (minimum 3 karaktera).')" oninput="setCustomValidity('')" />
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="text" class="form-control" name="surnameNutritionist" id="surnameNutritionist" placeholder="Vaše prezime" data-rule="minlen:3" data-msg="Unesite bar 3 karaktera" />
-                  <div class="validate"></div>
+                  <input type="text" class="form-control" name="surnameNutritionist" id="surnameNutritionist" placeholder="Vaše prezime" required minlength="3" maxlength="50" oninvalid="this.setCustomValidity('Unesite Vaše prezime (minimum 3 karaktera).')" oninput="setCustomValidity('')" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="col-md-12 form-group">
-                  <input type="email" class="form-control" name="emailNutritionist" id="emailNutritionist" placeholder="Vaša mejl adresa" data-rule="email" data-msg="Unesite validan mejl" />
-                  <div class="validate"></div>
+                  <input type="email" class="form-control" name="emailNutritionist" id="emailNutritionist" placeholder="Vaša mejl adresa" maxlength="50" required oninvalid="this.setCustomValidity('Unesite ispravnu mejl adresu.')" oninput="setCustomValidity('')" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="tel" id="phoneNutritionist" name="phoneNutritionist"  class="form-control" placeholder="Telefon (primer 381623456789)" data-rule="minlen:3" data-msg="Unesite validan telefon">
-                  <div class="validate"></div>
+                  <input type="tel" id="phoneNutritionist" name="phoneNutritionist"  class="form-control" placeholder="Telefon u formatu (+381)(0)623456789" pattern="(([+]?381)|0)?6[0-6|9]{1}[0-9]{6,7}" required oninvalid="this.setCustomValidity('Unesite Vaše broj telefonu u traženom formatu.')" oninput="setCustomValidity('')" />
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="tel" id="phoneNutritionist" name="phoneNutritionist"  class="form-control" placeholder="Telefon (primer 381623456789)" data-rule="minlen:3" data-msg="Unesite validan telefon">
-                  <div class="validate"></div>
+                  <input type="text" class="form-control" id="date" placeholder="Datum termina" required>
                 </div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="messageNutritionist" id="messageNutritionist" rows="5" data-rule="required" data-msg="Opišite nam Vaš problem" placeholder="Opis problema"></textarea>
-                <div class="validate"></div>
+                <textarea class="form-control" name="messageNutritionist" id="messageNutritionist" rows="5" placeholder="Opis problema" required minlength="10" oninvalid="this.setCustomValidity('Unesite opis problema (minimum 10 karaktera).')" oninput="setCustomValidity('')"></textarea>
               </div>
-              <div class="text-center"><button name="nutritionist-button" onclick="printPDF('Nutritionist', 'Nutricionista')">Zakaži termin</button></div>
+              <div class="text-center"><button type="submit" name="nutritionist-button" onclick="">Zakaži termin</button></div>
             </form>
           </div>  
         </div>
@@ -202,6 +200,16 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      const input = document.getElementById('date');
+      const datepicker = new TheDatepicker.Datepicker(input);
+      datepicker.options.setMinDate("tomorrow");
+      datepicker.options.setShowDeselectButton(false);
+      datepicker.render();
+    });
+  </script>
 
 </body>
 

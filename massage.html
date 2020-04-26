@@ -24,9 +24,9 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   
-  <!-- Bootstrap Date-Picker Plugin -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+  <!-- Date-Picker Plugin -->
+  <link href="assets/css/the-datepicker.css" rel="stylesheet">
+  <script src="assets/js//the-datepicker.js"></script>
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -88,36 +88,27 @@
             <form id="formMassage" class="appointment-form" onsubmit="printPDF('Massage', 'Masaža')">
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="nameMassage" class="form-control" id="nameMassage" placeholder="Vaše ime" required />
-                  <div class="validate"></div>
+                  <input type="text" name="nameMassage" class="form-control" id="nameMassage" placeholder="Vaše ime" required minlength="3" maxlength="50" oninvalid="this.setCustomValidity('Unesite Vaše ime (minimum 3 karaktera).')" oninput="setCustomValidity('')" />
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="text" class="form-control" name="surnameMassage" id="surnameMassage" placeholder="Vaše prezime" required />
-                  <div class="validate"></div>
+                  <input type="text" class="form-control" name="surnameMassage" id="surnameMassage" placeholder="Vaše prezime" required minlength="3" maxlength="50" oninvalid="this.setCustomValidity('Unesite Vaše prezime (minimum 3 karaktera).')" oninput="setCustomValidity('')" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="col-md-12 form-group">
-                  <input type="email" class="form-control" name="emailMassage" id="emailMassage" placeholder="Vaša mejl adresa" required />
+                  <input type="email" class="form-control" name="emailMassage" id="emailMassage" placeholder="Vaša mejl adresa" maxlength="50" required oninvalid="this.setCustomValidity('Unesite ispravnu mejl adresu.')" oninput="setCustomValidity('')" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="tel" id="phoneMassage" name="phoneMassage"  class="form-control" placeholder="Telefon (primer 381623456789)" pattern="[+]?3816[0-6|9]{1}[0-9]{6,7}" required />
-                  <div class="validate"></div>
+                  <input type="tel" id="phoneMassage" name="phoneMassage"  class="form-control" placeholder="Telefon u formatu (+381)(0)623456789" pattern="(([+]?381)|0)?6[0-6|9]{1}[0-9]{6,7}" required oninvalid="this.setCustomValidity('Unesite Vaše broj telefonu u traženom formatu.')" oninput="setCustomValidity('')" />
                 </div>
                 <div class="form-group col-md-6">
-                  <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                  </div>
+                  <input type="text" class="form-control" id="date" placeholder="Datum termina" required>
                 </div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="messageMassage" id="messageMassage" rows="5" placeholder="Opis problema" required  ></textarea>
-                <div class="validate"></div>
+                <textarea class="form-control" name="messageMassage" id="messageMassage" rows="5" placeholder="Opis problema" required minlength="10" oninvalid="this.setCustomValidity('Unesite opis problema (minimum 10 karaktera).')" oninput="setCustomValidity('')"></textarea>
               </div>
               <div class="text-center"><button type="submit" name="massage-button" onclick="">Zakaži termin</button></div>
             </form>
@@ -210,9 +201,13 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script type="text/javascript">
-    $(function () {
-        $('#datetimepicker1').datetimepicker();
+  <script>
+    $(document).ready(function() {
+      const input = document.getElementById('date');
+      const datepicker = new TheDatepicker.Datepicker(input);
+      datepicker.options.setMinDate("tomorrow");
+      datepicker.options.setShowDeselectButton(false);
+      datepicker.render();
     });
   </script>
 

@@ -177,9 +177,13 @@ function printPDF(appointmentType, appointmentName){
   var pdf = new jsPDF();
   pdf.text(appointmentName.concat(", zakazivanje termina"), 10, 10);
   var elements = document.getElementById("form".concat(appointmentType)).elements;
+  var ypos = 30;
   for(var i = 0 ; i < elements.length - 1 ; i++){
     var item = elements.item(i);
-    pdf.text(10, 30 + i*10, pdf.splitTextToSize(item.placeholder + ": " + item.value, 180));
+    if (item.getAttribute('placeholder')) {
+      pdf.text(10, ypos, pdf.splitTextToSize(item.placeholder + ": " + item.value, 180));
+      ypos += 10;
+    }
   }
   pdf.save();
 }
