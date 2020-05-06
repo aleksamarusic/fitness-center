@@ -1194,6 +1194,46 @@ section {
   }
 }
 
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*/
+.nav-pills-custom .nav-link {
+  color: #aaa;
+  background: #fff;
+  position: relative;
+}
+
+.nav-pills-custom .nav-link.active {
+  color: #5690db;
+  background: #d4f1ff;
+}
+
+
+/* Add indicator arrow for the active tab */
+@media (min-width: 992px) {
+  .nav-pills-custom .nav-link::before {
+      content: '';
+      display: block;
+      border-top: 8px solid transparent;
+      border-left: 10px solid #e7f6fd;
+      border-bottom: 8px solid transparent;
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%);
+      opacity: 0;
+  }
+}
+
+.nav-pills-custom .nav-link.active::before {
+  opacity: 1;
+}
+
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
@@ -1365,6 +1405,7 @@ section {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 20px 0 30px 0;
   margin-bottom: 30px;
+  background-color: white;
 }
 
 .contact .info-box i {
@@ -1393,6 +1434,7 @@ section {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 30px;
   margin-bottom: 30px;
+  background-color: white;
 }
 
 .contact .php-email-form .validate {
@@ -1530,6 +1572,7 @@ section {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 30px;
   margin-bottom: 30px;
+  background-color: white;
 }
 
 .nutritionist .appointment-form .validate {
@@ -1612,6 +1655,7 @@ section {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 30px;
   margin-bottom: 30px;
+  background-color: white;
 }
 
 .massage .appointment-form .validate {
@@ -1655,6 +1699,26 @@ section {
 #dateMassage{width:180px; margin: 0 20px 20px 20px;}
 #dateMassage > span:hover{cursor: pointer;}
 
+/*--------------------------------------------------------------
+# Schedule training
+--------------------------------------------------------------*/
+
+.scheduleTraining .btn-primary {
+  background: #68A4C4;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.scheduleTraining .btn-primary:hover,
+.scheduleTraining .btn-primary:active,
+.scheduleTraining .btn-primary.active,
+.scheduleTraining .btn-primary:focus,
+.scheduleTraining .btn-primary.focus,
+.scheduleTraining .open > .dropdown-toggle.btn-primary {
+  background: #8dbad2;
+}
 
 /*--------------------------------------------------------------
 # Map
@@ -1666,7 +1730,7 @@ section {
 
 .map iframe {
   width: 100%;
-  height: 380px;
+  height: 500px;
 }
 
 /*--------------------------------------------------------------

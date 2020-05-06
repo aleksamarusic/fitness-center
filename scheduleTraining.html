@@ -13,7 +13,9 @@
   <link href="assets/img/logo.png" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -33,7 +36,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container">
-      
+
       <div class="logo float-left">
         <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"> FITNESS CENTER</a>
       </div>
@@ -58,7 +61,7 @@
     </div>
   </header><!-- End Header -->
 
-  <main id="main">
+  <main id="main" style="background-color: #e7f6fd;">
 
     <!-- ======= Our Services Section ======= -->
     <section class="breadcrumbs">
@@ -74,14 +77,420 @@
 
       </div>
     </section><!-- End Our Services Section -->
-    <section>
+    <section class="scheduleTraining" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <p style="margin-top: 2.5cm; margin-bottom: 2.5cm;">
-              Ovde ide sadržaj stranice
-            </p>
-          </div>  
+          <div class="col-md-2">
+            <!-- Tabs nav -->
+            <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist"
+              aria-orientation="vertical">
+              <a class="nav-link mb-3 p-3 shadow active" id="v-pills-yoga-tab" data-toggle="pill" href="#v-pills-yoga"
+                role="tab" aria-controls="v-pills-yoga" aria-selected="true">
+                <i class="fa fa-user-circle-o mr-2"></i>
+                <span class="font-weight-bold small text-uppercase">Yoga</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="v-pills-pilates-tab" data-toggle="pill" href="#v-pills-pilates"
+                role="tab" aria-controls="v-pills-pilates" aria-selected="false">
+                <i class="fa fa-calendar-minus-o mr-2"></i>
+                <span class="font-weight-bold small text-uppercase">Pilates</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="v-pills-core-tab" data-toggle="pill" href="#v-pills-core"
+                role="tab" aria-controls="v-pills-core" aria-selected="false">
+                <i class="fa fa-star mr-2"></i>
+                <span class="font-weight-bold small text-uppercase">Core</span></a>
+
+              <a class="nav-link mb-3 p-3 shadow" id="v-pills-cardio-tab" data-toggle="pill" href="#v-pills-cardio"
+                role="tab" aria-controls="v-pills-cardio" aria-selected="false">
+                <i class="fa fa-check mr-2"></i>
+                <span class="font-weight-bold small text-uppercase">Cardio</span></a>
+            </div>
+          </div>
+
+
+          <div class="col-md-10">
+            <!-- Tabs content -->
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade shadow rounded bg-white show active p-5" id="v-pills-yoga" role="tabpanel"
+                aria-labelledby="v-pills-yoga-tab">
+                <div class="accordion" id="accordionYoga">
+                  <div class="card">
+                    <div class="card-header" id="headingYogaHatha">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                          data-target="#collapseYogaHatha" aria-expanded="false" aria-controls="collapseYogaHatha">
+                          Yoga Hatha
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapseYogaHatha" class="collapse" aria-labelledby="headingYogaHatha"
+                      data-parent="#accordionYoga">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingYogaJnana">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                          data-target="#collapseYogaJnana" aria-expanded="false" aria-controls="collapseYogaJnana">
+                          Yoga Jnana
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseYogaJnana" class="collapse" aria-labelledby="headingYogaJnana"
+                      data-parent="#accordionYoga">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingYogaIyengar">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                          data-target="#collapseYogaIyengar" aria-expanded="false" aria-controls="collapseYogaIyengar">
+                          Yoga Iyengar
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseYogaIyengar" class="collapse" aria-labelledby="headingYogaIyengar"
+                      data-parent="#accordionYoga">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-pilates" role="tabpanel"
+                aria-labelledby="v-pills-pilates-tab">
+                <div class="accordion" id="accordionPilates">
+                  <div class="card">
+                    <div class="card-header" id="headingPilatesClassical">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                          data-target="#collapsePilatesClassical" aria-expanded="false"
+                          aria-controls="collapsePilatesClassical">
+                          Pilates Classical
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapsePilatesClassical" class="collapse" aria-labelledby="headingPilatesClassical"
+                      data-parent="#accordionPilates">
+                      <div class="card-body">
+                        <div class="table-responsive">
+                          <table class="table table-bordred table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Date & time</th>
+                                <th scope="col">Free seats</th>
+                                <th scope="col">Reserve</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  4th May <br><hr>
+                                  Start time: 16:00 <br><hr>
+                                  End time: 17:00
+                                </td>
+                                <td>15:00</td>
+                                <td>
+                                  <button type="button" class="btn btn-primary">Reserve</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  5th May <br><hr>
+                                  Start time: 16:00 <br><hr>
+                                  End time: 17:00
+                                </td>
+                                <td>15:00</td>
+                                <td>
+                                  <button type="button" class="btn btn-primary">Reserve</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  6th May <br><hr>
+                                  Start time: 16:00 <br><hr>
+                                  End time: 17:00
+                                </td>
+                                <td>15:00</td>
+                                <td>
+                                  <button type="button" class="btn btn-primary">Reserve</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  7th May <br><hr>
+                                  Start time: 16:00 <br><hr>
+                                  End time: 17:00
+                                </td>
+                                <td>15:00</td>
+                                <td>
+                                  <button type="button" class="btn btn-primary">Reserve</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  8th May <br><hr>
+                                  Start time: 16:00 <br><hr>
+                                  End time: 17:00
+                                </td>
+                                <td>15:00</td>
+                                <td>
+                                  <button type="button" class="btn btn-primary">Reserve</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  9th May <br><hr>
+                                  Start time: 16:00 <br><hr>
+                                  End time: 17:00
+                                </td>
+                                <td>15:00</td>
+                                <td>
+                                  <button type="button" class="btn btn-primary">Reserve</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  10th May <br><hr>
+                                  Start time: 16:00 <br><hr>
+                                  End time: 17:00
+                                </td>
+                                <td>15:00</td>
+                                <td>
+                                  <button type="button" class="btn btn-primary">Reserve</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingPilatesStott">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                          data-target="#collapsePilatesStott" aria-expanded="false"
+                          aria-controls="collapsePilatesStott">
+                          Pilates Stott
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapsePilatesStott" class="collapse" aria-labelledby="headingPilatesStott"
+                      data-parent="#accordionPilates">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingPilatesReformer">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                          data-target="#collapsePilatesReformer" aria-expanded="false"
+                          aria-controls="collapsePilatesReformer">
+                          Pilates Reformer
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapsePilatesReformer" class="collapse" aria-labelledby="headingPilatesReformer"
+                      data-parent="#accordionPilates">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-core" role="tabpanel"
+                aria-labelledby="v-pills-core-tab">
+                <div class="accordion" id="accordionCore">
+                  <div class="card">
+                    <div class="card-header" id="headingCoreClassical">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                          data-target="#collapseCoreClassical" aria-expanded="false"
+                          aria-controls="collapseCoreClassical">
+                          Core Classical
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapseCoreClassical" class="collapse" aria-labelledby="headingCoreClassical"
+                      data-parent="#accordionCore">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingCorePower">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                          data-target="#collapseCorePower" aria-expanded="false" aria-controls="collapseCorePower">
+                          Core Power
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseCorePower" class="collapse" aria-labelledby="headingCorePower"
+                      data-parent="#accordionCore">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingCoreGlute">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                          data-target="#collapseCoreGlute" aria-expanded="false" aria-controls="collapseCoreGlute">
+                          Core Glute
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseCoreGlute" class="collapse" aria-labelledby="headingCoreGlute"
+                      data-parent="#accordionCore">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-cardio" role="tabpanel"
+                aria-labelledby="v-pills-cardio-tab">
+                <div class="accordion" id="accordionCardio">
+                  <div class="card">
+                    <div class="card-header" id="headingCardioHIIT">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                          data-target="#collapseCardioHIIT" aria-expanded="false" aria-controls="collapseCardioHIIT">
+                          Cardio High Intensity Interval Training (HIIT)
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapseCardioHIIT" class="collapse" aria-labelledby="headingCardioHIIT"
+                      data-parent="#accordionCardio">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingCardioSS">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                          data-target="#collapseCardioSS" aria-expanded="false" aria-controls="collapseCardioSS">
+                          Cardio Steady State (SS)
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseCardioSS" class="collapse" aria-labelledby="headingCardioSS"
+                      data-parent="#accordionCardio">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingCardioSpinn">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                          data-target="#collapseCardioSpinn" aria-expanded="false" aria-controls="collapseCardioSpinn">
+                          Cardio Spinn
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseCardioSpinn" class="collapse" aria-labelledby="headingCardioSpinn"
+                      data-parent="#accordionCardio">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -129,7 +538,8 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>O Fitness Center</h3>
-            <p>FITNESS CENTER je moderno opremljen fitness centar, prilagođen najraznovrsnijim treninzima i najrazličitijim fitnes potrebama vežbača, kao i individualnoj kondiciji svakog člana.</p>
+            <p>FITNESS CENTER je moderno opremljen fitness centar, prilagođen najraznovrsnijim treninzima i
+              najrazličitijim fitnes potrebama vežbača, kao i individualnoj kondiciji svakog člana.</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -147,7 +557,8 @@
         &copy; Copyright 2020, <strong><span>Aleksa Marušić & Filip Đurđević</span></strong>,
       </div>
       <div class="credits">
-        Odsek za softversko inženjerstvo <a href="https://www.etf.bg.ac.rs/"> Elektrotehničkog fakulteta</a> Univerziteta u Beogradu
+        Odsek za softversko inženjerstvo <a href="https://www.etf.bg.ac.rs/"> Elektrotehničkog fakulteta</a>
+        Univerziteta u Beogradu
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -168,6 +579,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Schedule JS File -->
+  <link href="assets/js/schedule.js" rel="stylesheet">
 
 </body>
 
