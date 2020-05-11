@@ -173,6 +173,13 @@
 
 })(jQuery);
 
+Storage.prototype.setObj = function(key, obj) {
+  return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+  return JSON.parse(this.getItem(key))
+}
+
 function printPDF(appointmentType, appointmentName){
   var pdf = new jsPDF();
   pdf.text(appointmentName.concat(", zakazivanje termina"), 10, 10);
@@ -188,3 +195,227 @@ function printPDF(appointmentType, appointmentName){
   pdf.save();
 }
 
+var scheduledTrainings = 
+[
+  {
+    "id" : "collapseYogaHatha",
+    "Start-time" : "19:00",
+    "End-time" : "20:00"
+  },
+  {
+    "id" : "collapseYogaJnana",
+    "Start-time" : "18:00",
+    "End-time" : "19:00"
+  },
+  {
+    "id" : "collapseYogaIyengar",
+    "Start-time" : "17:00",
+    "End-time" : "18:00"
+  },
+  {
+    "id" : "collapsePilatesClassical",
+    "Start-time" : "20:00",
+    "End-time" : "21:00"
+  },
+  {
+    "id" : "collapsePilatesStott",
+    "Start-time" : "19:00",
+    "End-time" : "20:00"
+  },
+  {
+    "id" : "collapsePilatesReformer",
+    "Start-time" : "21:00",
+    "End-time" : "22:00"
+  },
+  {
+    "id" : "collapseCoreClassical",
+    "Start-time" : "18:00",
+    "End-time" : "19:00"
+  },
+  {
+    "id" : "collapseCorePower",
+    "Start-time" : "19:00",
+    "End-time" : "20:00"
+  },
+  {
+    "id" : "collapseCoreGlute",
+    "Start-time" : "20:00",
+    "End-time" : "21:00"
+  },
+  {
+    "id" : "collapseCardioHIIT",
+    "Start-time" : "21:00",
+    "End-time" : "22:00"
+  },
+  {
+    "id" : "collapseCardioSS",
+    "Start-time" : "19:00",
+    "End-time" : "20:00"
+  },
+  {
+    "id" : "collapseCardioSpinn",
+    "Start-time" : "17:00",
+    "End-time" : "18:00"
+  }
+]
+
+var months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+
+function loadScheduledTrainings(id) {
+  /*var myScheduledTrainigs = new Array();
+  var numberOfScheduledTrainigs = 0;
+  if ('localStorage' in window && window.localStorage !== null) {
+    if (localStorage.getItem("numberOfScheduledTrainigs") == true) {
+      numberOfScheduledTrainigs = parseInt(localStorage.getItem("numberOfScheduledTrainigs"));
+      myScheduledTrainigs = localStorage.getObj("myScheduledTrainigs");
+    }
+  }*/
+  var htmlCode = "<div class=\"table-responsive\"><table class=\"table table-bordred table-striped\"><thead><tr><th scope=\"col\">Date & time</th><th scope=\"col\">Free seats</th><th scope=\"col\">Reserve</th></tr></thead><tbody>";
+  var date = new Date(); 
+  for (var i = 0; i < 7; i++) {
+    htmlCode += "<tr><td>";
+    date.setDate(date.getDate() + 1);
+    var month = months[date.getMonth()];
+    var day = date.getDate();
+    htmlCode+=day;
+    switch (day % 10) {
+      case 1: 
+        htmlCode+="st";
+        break;
+      case 2: 
+        htmlCode+="nd";
+        break;
+      case 3: 
+        htmlCode+="rd";
+        break;
+      default:
+        htmlCode+="th";
+        break;
+    }
+    indId = 0;
+    var freeSeats = i * 2;
+    while (scheduledTrainings[indId].id !== id) indId += 1;
+    var startTime = scheduledTrainings[indId]["Start-time"];
+    var endTime = scheduledTrainings[indId]["End-time"];
+    buttonId = "" + id + "-" + day + "-" + date.getMonth() + "-" + date.getFullYear();
+    var isTrainigScheduled = false;
+    if ('localStorage' in window && window.localStorage !== null) {
+      isTrainigScheduled = localStorage.getItem(buttonId);
+    }
+    if (isTrainigScheduled) {
+      //console.log("sadrzi"+i);
+      htmlCode+=" "+month+"<br><hr>Start time: " + startTime + " <br><hr>End time: " + endTime + "</td><td id=\"" + buttonId + "-freeSeats\">" + (freeSeats - 1) + "</td><td><button id=\""+ buttonId +"\" type=\"button\" class=\"btn btn-primary\" onClick=\"reserveTraining(this.id)\" disabled>Reserve</button></td></tr>";
+    }
+    else {
+      htmlCode+=" "+month+"<br><hr>Start time: " + startTime + " <br><hr>End time: " + endTime + "</td><td id=\"" + buttonId + "-freeSeats\">" + freeSeats + "</td><td><button id=\""+ buttonId +"\" type=\"button\" class=\"btn btn-primary\" onClick=\"reserveTraining(this.id)\"";
+      if (freeSeats == 0) htmlCode += " disabled";
+      htmlCode += ">Reserve</button></td></tr>";
+    }
+    
+  }  
+  htmlCode+="</tbody></table></div>";
+  document.getElementById(id).children[0].innerHTML = htmlCode;
+}
+
+function reserveTraining(id)
+{
+  /*console.log(id);
+  var myScheduledTrainigs = new Array();
+  var numberOfScheduledTrainigs = 0;
+  if ('localStorage' in window && window.localStorage !== null) {
+    if (localStorage.getItem("numberOfScheduledTrainigs") == true) {
+      numberOfScheduledTrainigs = parseInt(localStorage.getItem("numberOfScheduledTrainigs"))
+      myScheduledTrainigs = localStorage.getObj("myScheduledTrainigs");
+    }
+  }
+  if (!myScheduledTrainigs.includes(id)) {
+    myScheduledTrainigs.push(id);
+    numberOfScheduledTrainigs += 1;
+    localStorage.setItem("numberOfScheduledTrainigs", numberOfScheduledTrainigs);
+    localStorage.setObj("myScheduledTrainigs", myScheduledTrainigs);
+    document.getElementById(id).disabled = true;
+  }*/
+  if ('localStorage' in window && window.localStorage !== null) {
+    localStorage.setItem(id, "1");
+    document.getElementById(id).disabled = true;
+    document.getElementById(id + "-freeSeats").innerHTML = parseInt(document.getElementById(id + "-freeSeats").innerHTML) - 1;
+  }
+}
+
+function removeTrainingReservation(btn, id)
+{
+  console.log(id);
+  /*var myScheduledTrainigs = new Array();
+  var numberOfScheduledTrainigs = 0;
+  if ('localStorage' in window && window.localStorage !== null) {
+    if (localStorage.getItem("numberOfScheduledTrainigs") == true) {
+      numberOfScheduledTrainigs = parseInt(localStorage.getItem("numberOfScheduledTrainigs"))
+      myScheduledTrainigs = localStorage.getObj("myScheduledTrainigs");
+    }
+  }
+  if (myScheduledTrainigs.includes(id)) {
+    myScheduledTrainigs.splice(myScheduledTrainigs.indexOf(id), 1);
+    numberOfScheduledTrainigs -= 1;
+    localStorage.setItem("numberOfScheduledTrainigs", numberOfScheduledTrainigs);
+    localStorage.setObj("myScheduledTrainigs", myScheduledTrainigs);
+  }*/
+  if ('localStorage' in window && window.localStorage !== null) {
+    localStorage.removeItem(id);
+    var row = btn.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+  }
+}
+
+function showMyScheduledTrainings () {
+  var noScheduledTrainings = true;
+  var htmlCode = "<div class=\"table-responsive\"><table class=\"table table-bordred table-striped\"><thead><tr><th scope=\"col\">Training info</th><th scope=\"col\">Remove reservation</th></tr></thead><tbody>";
+  for (var i = 0; i < scheduledTrainings.length; i++) {
+    var date = new Date(); 
+    date.setDate(date.getDate() - 1);
+    for (var j = 0; j < 8; j++) {
+      //htmlCode += "<tr><td>";
+      date.setDate(date.getDate() + 1);
+      //var month = months[date.getMonth()];
+      var day = date.getDate();
+      var month = months[date.getMonth()];
+      var startTime = scheduledTrainings[i]["Start-time"];
+      var endTime = scheduledTrainings[i]["End-time"];
+      buttonId = "" + scheduledTrainings[i].id + "-" + day + "-" + date.getMonth() + "-" + date.getFullYear();
+      var isTrainigScheduled = false;
+      if ('localStorage' in window && window.localStorage !== null) {
+        isTrainigScheduled = localStorage.getItem(buttonId);
+      }
+      if (isTrainigScheduled) {
+        noScheduledTrainings = false;
+        //console.log("sadrzi"+i);
+        htmlCode += "<tr><td>";
+        htmlCode += scheduledTrainings[i].id.match(/[A-Z][a-z]+/g).join(" ");
+        htmlCode += "<br><hr>Date: " + day;
+        switch (day % 10) {
+          case 1: 
+            htmlCode+="st";
+            break;
+          case 2: 
+            htmlCode+="nd";
+            break;
+          case 3: 
+            htmlCode+="rd";
+            break;
+          default:
+            htmlCode+="th";
+            break;
+        }
+        htmlCode+=" "+month+"<br><hr>Start time: " + startTime + " <br><hr>End time: " + endTime + "</td><td><button type=\"button\" class=\"btn btn-primary\" onClick=\"removeTrainingReservation(this, '" + buttonId + "')\"";
+        if (j == 0 && parseInt(startTime.split(":")[0]) - date.getHours() == 1 && date.getMinutes() > 30) htmlCode += " disabled";
+        htmlCode += ">Remove</button></td></tr>";
+      }
+    }
+  }
+  htmlCode+="</tbody></table></div>";
+  if (noScheduledTrainings) {
+    document.getElementById("accountScheduledTrainings").innerHTML = "<p style=\"margin-top: 2.5cm; margin-bottom: 2.5cm;\">Nema zakazanih treninga</p>";
+  }
+  else {
+    document.getElementById("accountScheduledTrainings").innerHTML = htmlCode;
+  }
+}
