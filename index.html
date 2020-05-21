@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/trainings/logo.png" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
@@ -35,7 +35,8 @@
     <div class="container">
       
       <div class="logo float-left">
-        <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"> FITNESS CENTER</a>
+          <a style="color:white" href="index.html"><img style="width:50px" src="assets/img/trainings/logo.png" alt="" class="img-fluid">FITNESS CENTER</a>
+
       </div>
 
       <nav class="nav-menu float-right d-none d-lg-block">
@@ -57,35 +58,42 @@
 
     </div>
   </header><!-- End Header -->
+  
+<!-- Page Preloder -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
+  <section id="hero">
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    
     <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
 
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animated fadeInDown">Welcome to <span>Moderna</span></h2>
-          <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="" class="btn-get-started animated fadeInUp">Read More</a>
+          <h2 class="animated fadeInDown"><span>FITNESS CENTER</span></h2>
+          <p class="animated fadeInUp">
+            Vaše novo omiljeno mesto za trening i relaksaciju u centru grada
+            </p>
+          <a href="about.html" class="btn-get-started animated fadeInUp">Saznaj više</a>
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animated fadeInDown">Lorem Ipsum Dolor</h2>
-          <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="" class="btn-get-started animated fadeInUp">Read More</a>
+          <h2 class="animated fadeInDown">Ambijent</h2>
+          <p class="animated fadeInUp">Moderno opremljen ambijent sastoji se od dve velike sale (po 80m2) za grupne i personalne treninge, prostorije za masažu, čekaonice gde uz najnovije magazine i piće možete sačekati trening</p>
+          <a href="about.html" class="btn-get-started animated fadeInUp">Saznaj više</a>
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animated fadeInDown">Sequi ea ut et est quaerat</h2>
-          <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="" class="btn-get-started animated fadeInUp">Read More</a>
+          <h2 class="animated fadeInDown">Onlajn zakazivanje</h2>
+          <p class="animated fadeInUp">Od sada je moguće zakazati trening i na našem sajtu!</p>
+          <a href="scheduleTraining.html" class="btn-get-started animated fadeInUp">Zakaži</a>
         </div>
       </div>
 
@@ -100,150 +108,138 @@
       </a>
 
     </div>
-  </section><!-- End Hero -->
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
 
+  </section><!-- End Hero -->
+ 
   <main id="main">
 
     <!-- ======= Services Section ======= -->
     <section class="services">
       <div class="container">
-
         <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="icon-box icon-box-pink">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          <div class="col-12">
+            <h2>Naši najbolji treninzi</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box icon-box-black">
+              <div class="icon"><img class="top3"src="assets/img/trainings/number-one.png"></div>
+              <h4 class="title"><a id="number1"href="">Lorem Ipsum</a></h4>
+              <h5 class="number-desc"id="number1-desc"></h5>
+              <p class="description">Naš najbolje ocenjen trening. Vrlo intenzivan trening koji ne traje dugo. </p>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box icon-box-cyan">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-black">
+              <div class="icon"><img class="top3"src="assets/img/trainings/number-two.png"></div>
+              <h4 class="title"><a id="number2"href="">Sed ut perspiciatis</a></h4>
+              <h5 class="number-desc" id="number2-desc"></h5>
+              <p class="description">Drugi najbolje ocenjen trening..............................</p>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box icon-box-green">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-black">
+              <div class="icon"><img class="top3"src="assets/img/trainings/number-three.png"></div>
+              <h4 class="title"><a id="number3"href="">Magni Dolores</a></h4>
+              <h5 class="number-desc"id="number3-desc"></h5>
+              <p class="description">Treći najbolje ocenjen trening. Fibi Vam preporučuje ovaj trening!</p>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box icon-box-blue">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
 
         </div>
 
       </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Why Us Section ======= -->
-    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6 video-box">
-            <img src="assets/img/why-us.jpg" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-          </div>
-
-          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Why Us Section -->
-
     <!-- ======= Features Section ======= -->
     <section class="features">
       <div class="container">
 
         <div class="section-title">
-          <h2>Features</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Usluge i pogodnosti</h2>
+          <p>Fitness Center nudi veliki broj usluga i pogodnosti.</p>
         </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-md-5">
-            <img src="assets/img/features-1.svg" class="img-fluid" alt="">
+            <img src="assets/img/illustrations/personal_trainer.svg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-4">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>Individualni treninzi</h3>
             <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Svi ljudi se međusobno razlikuju u telesnoj kompoziciji, načinu života, kao i ciljevima koje žele da postignu treningom. Zbog toga je individualni pristup tj. personalni trening, najpopularniji i najefikasniji način vežbanja.
             </p>
             <ul>
-              <li><i class="icofont-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="icofont-check"></i> Najbolji treneri u regionu</li>
+              <li><i class="icofont-check"></i> Personalizovani plan i program</li>
             </ul>
           </div>
         </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-md-5 order-1 order-md-2">
-            <img src="assets/img/features-2.svg" class="img-fluid" alt="">
+            <img src="assets/img/illustrations/healthy_lifestyle.svg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
-            <h3>Corporis temporibus maiores provident</h3>
+            <h3>Standarni Paket</h3>
             <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Našim korisnicima je od sada i u standardnom paketu omogućeno praćenje napretka pomoću naše mobilne aplikacije.
             </p>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+              <ul>
+              <li><i class="icofont-check"></i> Praćenje napretka pomoću aplikacije</li>
+              <li><i class="icofont-check"></i> Pristup svim našim objektima 24/7</li>
+              <li><i class="icofont-check"></i> 12 termina</li>
+            </ul>
             </p>
+            
           </div>
         </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-md-5">
-            <img src="assets/img/features-3.svg" class="img-fluid" alt="">
+            <img src="assets/img/illustrations/fitness_stats.svg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5">
-            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+            <h3>Premium Paket</h3>
+            <p>Odlučite se za naš Premium Paket i uživajte u svim pogodnostima</p>
             <ul>
-              <li><i class="icofont-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="icofont-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
+              
+              <li><i class="icofont-check"></i> Praćenje napretka pomoću aplikacije</li>
+              <li><i class="icofont-check"></i> Popust na individualne treninge</li>
+              <li><i class="icofont-check"></i> Personalizovan plan ishrane</li>
+              <li><i class="icofont-check"></i> Masaže i sauna</li>
+              <li><i class="icofont-check"></i> Neograničen pristup bilo kom našem objektu 24/7</li>
             </ul>
           </div>
         </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-md-5 order-1 order-md-2">
-            <img src="assets/img/features-4.svg" class="img-fluid" alt="">
+            <img src="assets/img/illustrations/healthy_habit.svg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
+            <h3>Moderna oprema</h3>
             <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Naši objekti opremljeni su namodernijom opremom.
             </p>
             <p>
               Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
@@ -280,7 +276,7 @@
             <h4>Naše usluge</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="trainings.html">Treninzi</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="nutritionist.html">Nutricionista</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="mutritionist.html">Nutricionista</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="massage.html">Masaže</a></li>
             </ul>
           </div>
@@ -299,7 +295,7 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>O Fitness Center</h3>
-            <p>FITNESS CENTER je moderno opremljen fitness centar, prilagođen najraznovrsnijim treninzima i najrazličitijim fitnes potrebama vežbača, kao i individualnoj kondiciji svakog člana.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos reiciendis perspiciatis illum aliquam ut voluptatibus necessitatibus amet magnam magni unde id ipsum iste veritatis animi reprehenderit ipsam, sint libero officia.</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -335,9 +331,11 @@
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+	<script src="assets/js/circle-progress.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/trainings.js"></script>
 
 </body>
 

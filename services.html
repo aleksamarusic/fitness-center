@@ -30,12 +30,16 @@
 
 <body>
 
+<!-- Page Preloder -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container">
       
       <div class="logo float-left">
-        <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"> FITNESS CENTER</a>
+        <a href="index.html"><img src="assets/img/trainings/logo.png" alt="" class="img-fluid"> FITNESS CENTER</a>
       </div>
 
       <nav class="nav-menu float-right d-none d-lg-block">
@@ -44,7 +48,7 @@
           <li><a href="about.html">O nama</a></li>
           <li class="drop-down active"><a href="services.html">Usluge</a>
             <ul>
-              <li><a href="trainings.html">Treninzi</a></li>
+              <li class="active"><a href="trainings.html">Treninzi</a></li>
               <li><a href="nutritionist.html">Nutricionista</a></li>
               <li><a href="massage.html">Masaže</a></li>
             </ul>
@@ -58,14 +62,14 @@
     </div>
   </header><!-- End Header -->
 
-  <main id="main" style="background-color: #e7f6fd;">
+  <main id="main">
 
     <!-- ======= Our Services Section ======= -->
     <section class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Usluge</h2>
+          <h2>Treninzi</h2>
           <ol>
             <li><a href="index.html">Početna</a></li>
             <li>Usluge</li>
@@ -74,13 +78,38 @@
 
       </div>
     </section><!-- End Our Services Section -->
-    <section class="services" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-      <div class="container">
+    <section>
+      <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
-            <p style="margin-top: 2.5cm; margin-bottom: 2.5cm;">
-              Ovde ide sadržaj stranice
-            </p>
+            <div class="trainings-banner services-banner"></div>
+            <!-- ======= Training Categories ======= -->
+            <h2 class="trainings-title">Usluge</h2>
+            <div class="card-deck">
+              <div class="card" id=""onclick="location.href='trainings.html'">
+                <img class="card-img-top" src="assets/img/trainings/core1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Treninzi</h5>
+                  <p class="card-text">Možete pogledati razne vrste treninga, oceniti ih i ostaviti komentar.</p>
+                  </div>
+              </div>
+              <div class="card" id="Pilates"onclick="location.href='nutritionist.html'">
+                <img class="card-img-top" src="assets/img/trainings/nutrition.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Nutricionista</h5>
+                  <p class="card-text">Zakažite termin kod našeg nutricioniste.</p>
+                 </div>
+              </div>
+              <div class="card" id="Core"onclick="location.href='massage.html'">
+                <img class="card-img-top" src="assets/img/trainings/masseuse.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Masaže</h5>
+                  <p class="card-text">Zakažite masažu kod nas. Svaki dan od 08-22</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- End Training Categories -->
           </div>  
         </div>
       </div>
@@ -88,6 +117,7 @@
 
   </main><!-- End #main -->
 
+  
   <!-- ======= Footer ======= -->
   <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
 
@@ -110,7 +140,7 @@
             <h4>Naše usluge</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="trainings.html">Treninzi</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="nutritionist.html">Nutricionista</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="mutritionist.html">Nutricionista</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="massage.html">Masaže</a></li>
             </ul>
           </div>
@@ -129,7 +159,7 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>O Fitness Center</h3>
-            <p>FITNESS CENTER je moderno opremljen fitness centar, prilagođen najraznovrsnijim treninzima i najrazličitijim fitnes potrebama vežbača, kao i individualnoj kondiciji svakog člana.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos reiciendis perspiciatis illum aliquam ut voluptatibus necessitatibus amet magnam magni unde id ipsum iste veritatis animi reprehenderit ipsam, sint libero officia.</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -165,6 +195,7 @@
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+	<script src="assets/js/circle-progress.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
