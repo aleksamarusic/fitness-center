@@ -282,12 +282,12 @@ var scheduledTrainings =
     "End-time" : "21:00"
   },
   {
-    "id" : "collapseCardioHIIT",
+    "id" : "collapseCardioHit",
     "Start-time" : "21:00",
     "End-time" : "22:00"
   },
   {
-    "id" : "collapseCardioSS",
+    "id" : "collapseCardioSteadyState",
     "Start-time" : "19:00",
     "End-time" : "20:00"
   },
