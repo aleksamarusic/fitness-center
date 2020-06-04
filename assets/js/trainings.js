@@ -482,7 +482,7 @@ var init;
         //Set length
         $('#length').html("<i class='bx bxs-time'></i> "+training.len+"min");
         //Set banner bg
-        $('.trainings-banner').css('background','linear-gradient(to right, rgba(0, 7, 10, 0.589), rgba(2, 13, 19, 0.616)),url("assets/img/trainings/'+training.banner+'") 0px -10vw no-repeat');
+        $('.trainings-banner').css('background','linear-gradient(to right, rgba(0, 7, 10, 0.589), rgba(2, 13, 19, 0.616)),url("/fitness-center/assets/img/trainings/'+training.banner+'") 0px -10vw no-repeat');
         $('.trainings-banner').css('background-size','100%');
         //Set difficulty
         var color="";
@@ -798,7 +798,7 @@ function findRating(str,arr){
   $(document).on('click', '.comment-reply', function(e) {
     var el='<div class="comment-box add-comment">\
     <span class="commenter-pic">\
-      <img src="assets/img/trainings/user.png" class="img-fluid">\
+      <img src="/fitness-center/assets/img/trainings/user.png" class="img-fluid">\
     </span>\
     <span class="commenter-name">\
       <input type="text" class="comment-input"id="add-comment-input" placeholder="Dodaj komentar" name="Add Comment">\
@@ -882,7 +882,7 @@ function appendComment(appendTo,name,content,likes,dislikes,replied,id){
   //Create element
   var elem=$('<div id="cb'+id+'"class="comment-box '+replied+'">\
   <span class="commenter-pic">\
-    <img src="assets/img/trainings/user.png" class="img-fluid">\
+    <img src="/fitness-center/assets/img/trainings/user.png" class="img-fluid">\
   </span>\
   <span class="commenter-name">\
     <a href="#">'+name+'</a> <span class="comment-time"><b>'+date+'</b></span>\
@@ -894,7 +894,7 @@ function appendComment(appendTo,name,content,likes,dislikes,replied,id){
     <button class="comment-reply reply-popup" id="b'+id+'"><i class="fa fa-reply-all" aria-hidden="true"></i> Odgovori</button></div> \
   <div class="comment-box add-comment reply-box">\
     <span class="commenter-pic">\
-      <img src="assets/img/trainings/user.png" class="img-fluid">\
+      <img src="/fitness-center/assets/img/trainings/user.png" class="img-fluid">\
     </span>\
     <span class="commenter-name">\
       <input type="text" placeholder="Dodaj komentar" name="Add Comment">\
