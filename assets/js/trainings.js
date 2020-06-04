@@ -482,7 +482,7 @@ var init;
         //Set length
         $('#length').html("<i class='bx bxs-time'></i> "+training.len+"min");
         //Set banner bg
-        $('.trainings-banner').css('background','linear-gradient(to right, rgba(0, 7, 10, 0.589), rgba(2, 13, 19, 0.616)),url("/assets/img/trainings/'+training.banner+'") 0px -10vw no-repeat');
+        $('.trainings-banner').css('background','linear-gradient(to right, rgba(0, 7, 10, 0.589), rgba(2, 13, 19, 0.616)),url("assets/img/trainings/'+training.banner+'") 0px -10vw no-repeat');
         $('.trainings-banner').css('background-size','100%');
         //Set difficulty
         var color="";
@@ -540,6 +540,7 @@ var init;
         $('.rating').hide();
         $('.rating-title').hide();
         $('#rate-text').hide();
+        $('#warning').show();
       }
       topThreeTrainings();
       setGalleryPictures();
@@ -788,17 +789,16 @@ function findRating(str,arr){
       addInnerComment("Filip",$(this).parent().find('.comment-input').val(),comment);
       
       console.log($(".footerCore").height());
-      var height = document.documentElement.scrollHeight-950;
-      $(".footerCore").css('margin-top',height);
     }
-    
+    var height = document.documentElement.scrollHeight-950;
+    $(".footerCore").css('margin-top',height);
   });
   var previousAddComment=null;
   //Reply button
   $(document).on('click', '.comment-reply', function(e) {
     var el='<div class="comment-box add-comment">\
     <span class="commenter-pic">\
-      <img src="/assets/img/trainings/user.png" class="img-fluid">\
+      <img src="assets/img/trainings/user.png" class="img-fluid">\
     </span>\
     <span class="commenter-name">\
       <input type="text" class="comment-input"id="add-comment-input" placeholder="Dodaj komentar" name="Add Comment">\
@@ -813,7 +813,8 @@ function findRating(str,arr){
   }
 
   $("#c"+this.id).append(el);
-  
+  var height = document.documentElement.scrollHeight-950;
+  $(".footerCore").css('margin-top',height);
   previousAddComment="#c"+this.id;
 });
 
@@ -857,6 +858,8 @@ $('#btn-add').click(function(){
   appendComment(null,"Filip",$('#add-comment-input').val(),0,0,"",id);
   addComment("Filip",$('#add-comment-input').val());
   $('#add-comment-input').val('');
+  var height = document.documentElement.scrollHeight-950;
+  $(".footerCore").css('margin-top',height);
 });
 $('.comment-reply').click(function(){
  
@@ -879,7 +882,7 @@ function appendComment(appendTo,name,content,likes,dislikes,replied,id){
   //Create element
   var elem=$('<div id="cb'+id+'"class="comment-box '+replied+'">\
   <span class="commenter-pic">\
-    <img src="/assets/img/trainings/user.png" class="img-fluid">\
+    <img src="assets/img/trainings/user.png" class="img-fluid">\
   </span>\
   <span class="commenter-name">\
     <a href="#">'+name+'</a> <span class="comment-time"><b>'+date+'</b></span>\
@@ -891,7 +894,7 @@ function appendComment(appendTo,name,content,likes,dislikes,replied,id){
     <button class="comment-reply reply-popup" id="b'+id+'"><i class="fa fa-reply-all" aria-hidden="true"></i> Odgovori</button></div> \
   <div class="comment-box add-comment reply-box">\
     <span class="commenter-pic">\
-      <img src="/assets/img/trainings/user.png" class="img-fluid">\
+      <img src="assets/img/trainings/user.png" class="img-fluid">\
     </span>\
     <span class="commenter-name">\
       <input type="text" placeholder="Dodaj komentar" name="Add Comment">\

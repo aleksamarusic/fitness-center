@@ -939,7 +939,7 @@ a{
 }
 .expandedContainer{
   position: absolute;
-  width:120vw;
+  width:130vw;
   left:10%;
   top:320px;
   margin-top: 0px;
@@ -959,9 +959,16 @@ a{
   color:white;
   font-size:25px;
 }
+
 .closebtn:hover{
   cursor: pointer;
   font-size: 28px;
+}
+#warning{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  color:red;
+  display:none;
 }
 #play-button{
   z-index:6;
