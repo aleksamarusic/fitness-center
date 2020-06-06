@@ -452,7 +452,7 @@ function showMyScheduledTrainings () {
   }
   htmlCode+="</tbody></table></div>";
   if (noScheduledTrainings) {
-    document.getElementById("accountScheduledTrainings").innerHTML = "<p style=\"margin-top: 2.5cm; margin-bottom: 2.5cm;\">Nema zakazanih treninga</p>";
+    document.getElementById("accountScheduledTrainings").innerHTML = "<p style=\"margin-top: 2.5cm; margin-bottom: 2.5cm;\">There are no scheduled trainings.</p>";
   }
   else {
     document.getElementById("accountScheduledTrainings").innerHTML = htmlCode;

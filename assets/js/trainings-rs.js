@@ -37,8 +37,7 @@ var init;
           'difficulty':'55',
           'banner':'core1.jpg',
           'group':'core',
-          'description':'A muscular and well-defined core shows both strength and health. Both guys and gals strive to have a strong, toned midsection, but very few of them ever achieve getting one. If you have been looking for the perfect program to get you the tight, strong core you always looked for, look no farther.'
-        },{
+          'description':'Mišićavi i dobro definisani trbusnjaci pokazuju i snagu i zdravlje. I momci i devojke teže da imaju jak, toniran presek, ali vrlo malo njih ikada postigne to. Ako ste tražili savršen program da biste dobili čvrste i snažne trbusnjake koje ste uvek tražili, ne tražite dalje. ' },{
           'training': 'Core Classical',
           'pictures':{
             '1':'photo2.jpg',
@@ -53,8 +52,7 @@ var init;
           'difficulty':'25',
           'banner':'core2.jpg',
           'group':'core',
-          'description':'The core is made up of primarily fast-twitch muscle fibers. Fast-twitch muscle fibers are more dense than their counterparts (the slow-twitch muscle fibers. Hence, hard, heavy, and explosive bouts of exercise will stimulate fast-twitch fibers a lot more.'
-        },{
+          'description':'Trbušnjaci se sastoje od primarnih mišićnih vlakana koja se brzo trzaju. Mišićna vlakna koja se brzo trzaju su gušća od svojih kolega (mišićna vlakna sporog trzanja). Teška i eksplozivna vežba će mnogo više podstaći vlakna koja se brzo trzaju. '    },{
           'training': 'Core Power',
           'pictures':{
             '1':'core1.jpg',
@@ -69,8 +67,8 @@ var init;
           'difficulty':'90',
           'group':'core',
           'banner':'core.jpg',
-          'description':'The core is made up of primarily fast-twitch muscle fibers. Fast-twitch muscle fibers are more dense than their counterparts (the slow-twitch muscle fibers. Hence, hard, heavy, and explosive bouts of exercise will stimulate fast-twitch fibers a lot more.'
-        },{
+          'description':'Trbušnjaci se sastoje od primarnih mišićnih vlakana koja se brzo trzaju. Mišićna vlakna koja se brzo trzaju su gušća od svojih kolega (mišićna vlakna sporog trzanja). Teška i eksplozivna vežba će mnogo više podstaći vlakna koja se brzo trzaju. '    },{
+          },{
           'training': 'Yoga Hatha',
           'pictures':{
             '1':'photo1.jpg',
@@ -84,8 +82,7 @@ var init;
           'len':'45',
           'difficulty':'20',
           'banner':'yoga1.jpg',
-          'description':'Yoga does more than burn calories and tone muscles. It is a total mind-body workout that combines strengthening and stretching poses with deep breathing and meditation or relaxation. Hatha is the form most often associated with yoga, it combines a series of basic movements with breathing.'
-        },{
+          'description':'Joga čini više nego što sagorieva kalorije i tonira mišiće. To je totalna vežba uma-tela koja kombinuje jačanje i istezanje poza sa dubokim disanjem i meditacijom ili opuštanjem. Hatha je oblik koji se najčešće povezuje sa jogom, ona kombinuje niz osnovnih pokreta sa disanjem. '     },{
           'training': 'Yoga Jnana',
           'pictures':{
             '1':'photo2.jpg',
@@ -99,8 +96,7 @@ var init;
           'len':'45',
           'difficulty':'40',
           'banner':'yoga2.jpg',
-          'description':'Jnana yoga, also known as Jnanamarga, is one of the several spiritual paths in Hinduism that emphasizes the "path of knowledge"' 
-              },{
+          'description':"Jnana joga, poznata i kao Jnanamarga, jedan je od nekoliko duhovnih staza u hinduizmu koji naglašava 'put znanja' " },{
           'training': 'Yoga Iynegar',
           'pictures':{
             '1':'core1.jpg',
@@ -114,8 +110,7 @@ var init;
           'len':'125',
           'difficulty':'90',
           'banner':'yoga3.jpg',
-          'description':'A type of yoga that uses props like blocks, straps, and chairs to help you move your body into the proper alignment.          '
-        },{
+          'description':'Vrsta joge koja koristi rekvizite poput blokova, kaiševa i stolica koji će vam pomoći da svoje telo pređete u ispravno poravnanje.'  },{
           'training': 'Cardio HIIT',
           'pictures':{
             '1':'core1.jpg',
@@ -129,8 +124,7 @@ var init;
           'len':'95',
           'difficulty':'50',
           'banner':'cardio1.jpg',
-          'description':'HIIT, or high-intensity interval training, can be an efficient, fun way to tackle your cardio workouts, add muscle, and shred serious fat.'
-        },{
+          'description':"HIIT, ili intervalni treninzi visokog intenziteta, mogu biti efikasan i zabavan način za rešavanje kardio treninga, dodavanje mišića i razbacivanje ozbiljnih masti."   },{
           'training': 'Cardio SS',
           'pictures':{
             '1':'photo2.jpg',
@@ -144,8 +138,7 @@ var init;
           'len':'45',
           'difficulty':'40',
           'banner':'cardio2.jpg',
-          'description':'Steady state cardio is simply a cardio workout that is a continuous, steady effort, as opposed to an interval cardio workout where you vary your energy output.'
-        },{
+          'description':'Kardio štand u stanju mirovanja je jednostavno kardio vežbanje koje je neprekidan i postojan napor, za razliku od intervnog kardio vežbanja gde menjate svoj energetski učinak.'   },{
           'training': 'Cardio Spinn',
           'pictures':{
             '1':'photo4.jpg',
@@ -159,8 +152,8 @@ var init;
           'len':'35',
           'difficulty':'60',
           'banner':'cardio3.jpg',
-          'description':'Spinn - Synonymous with cardio is SPINNING training, intense riding of static bicycles with a load to the rhythms of music' },{
-          'training': 'Pilates Classical',
+          'description':
+          'Spinn - Sinonim za kardio je SPINNING trening, intenzivna vožnja statičnih bicikala sa opterećenjem ritmovima muzike'}, {  'training': 'Pilates Classical',
           'pictures':{
             '1':'photo1.jpg',
             '2':'photo2.jpg',
@@ -173,8 +166,7 @@ var init;
           'len':'95',
           'difficulty':'50',
           'banner':'pilates1.jpg',
-          'description':'Pilates is a form of low-impact exercise that aims to strengthen muscles while improving postural alignment and flexibility.'
-        },{
+          'description':'Pilates je oblik vežbe sa malim udarom koji ima za cilj jačanje mišića uz poboljšanje posturalnog poravnanja i fleksibilnosti.'  },{
           'training': 'Pilates Stott',
           'pictures':{
             '1':'core1.jpg',
@@ -188,8 +180,7 @@ var init;
           'len':'45',
           'difficulty':'40',
           'banner':'pilates2.jpg',
-          'description':'STOTT PILATES is an extremely specific and sophisticated way of practicing Pilates on original therapeutic devices for reformers'   },{
-          'training': 'Pilates Reformer',
+          'description':'STOTT PILATES je izuzetno specifičan i sofisticiran način vežbanja pilatesa na originalnim terapijskim uređajima za reformatore'}, {  'training': 'Pilates Reformer',
           'pictures':{
             '1':'core1.jpg',
             '2':'core2.jpg',
@@ -202,8 +193,7 @@ var init;
           'len':'35',
           'difficulty':'60',
           'banner':'pilates3.jpg',
-          'description':'The reformer consists of a movable platform that slides back and forth on sliders and uses springs as resistances.'  }
-      ];
+          'description':"Reformator se sastoji od pokretne platforme koja klizne napred-nazad na klizačima i koristi opruge kao otpor." }];
 
       //Initialize comment information
       var comments=[/*{
@@ -490,7 +480,7 @@ var init;
           color="orange";
         }
         $('.c100').addClass('p'+training.difficulty+" "+color);
-        $('.c100-span').html('<div style="font-size:15px;">Difficulty: <b>'+txt+'</b></div>');
+        $('.c100-span').html('<div style="font-size:15px;">Težina: <b>'+txt+'</b></div>');
 
         $('.rate').show();
         $('.c100').show();
@@ -509,7 +499,7 @@ var init;
       if(comments!=undefined)
         traverseCommentSection(comments,null,0);
 
-      $('.total-comments').text(commentCnt+" comments");
+      $('.total-comments').text(commentCnt+" komentara");
 
 
       //Set my rating
@@ -798,9 +788,9 @@ function findRating(str,arr){
       <img src="/fitness-center/assets/img/trainings/user.png" class="img-fluid">\
     </span>\
     <span class="commenter-name">\
-      <input type="text" class="comment-input"id="add-comment-input" placeholder="Add Comment" name="Add Comment">\
-      <button type="submit" id="l'+this.id+'"class="btn btn-default add"style="background-color:#151A1D">Comment</button>\
-      <button type="cancel" class="btn btn-default cancel">Cancel</button>\
+      <input type="text" class="comment-input"id="add-comment-input" placeholder="Dodaj komentar" name="Add Comment">\
+      <button type="submit" id="l'+this.id+'"class="btn btn-default add"style="background-color:#151A1D">Komentariši</button>\
+      <button type="cancel" class="btn btn-default cancel">Otkaži</button>\
     </span>\
   </div>';
   //Remove previously added comment box
@@ -894,9 +884,9 @@ function appendComment(appendTo,name,content,likes,dislikes,replied,id){
       <img src="/fitness-center/assets/img/trainings/user.png" class="img-fluid">\
     </span>\
     <span class="commenter-name">\
-      <input type="text" placeholder="Add comment" name="Add Comment">\
-      <button type="submit" class="btn btn-default">Comment</button>\
-      <button type="cancel" class="btn btn-default reply-popup">Cancel</button>\
+      <input type="text" placeholder="Dodaj komentar" name="Add Comment">\
+      <button type="submit" class="btn btn-default">Komentariši</button>\
+      <button type="cancel" class="btn btn-default reply-popup">Otkaži</button>\
     </span>\
   </div></div>');
 
