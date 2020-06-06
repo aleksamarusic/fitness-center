@@ -510,3 +510,17 @@ function showMyScheduledTrainings () {
     document.getElementById("accountScheduledTrainings").innerHTML = htmlCode;
   }
 }
+
+function changeLanguage() {
+  var url = window.location.href;
+  if (url.includes("/en/")) {
+    url = url.replace("/en/", "/rs/");
+  }
+  else { 
+    url = url.replace("/rs/", "/en/");
+  }
+  //console.log(url);
+  //document.getElementById("test").innerHTML = url;
+  window.location.href = url;
+  //console.log("pozz3");
+}
