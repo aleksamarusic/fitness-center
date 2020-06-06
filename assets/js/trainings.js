@@ -559,7 +559,7 @@ var init;
       }
       for(var i=1;i<=len-1;i++){
         if($('#img'+i)[0]!=undefined)
-        $('#img'+i)[0].setAttribute("src","assets/img/trainings/"+pictures[i]);
+        $('#img'+i)[0].setAttribute("src","../assets/img/trainings/"+pictures[i]);
       }
     }
   }
@@ -687,7 +687,7 @@ function findRating(str,arr){
     
     array.push(elem.id);
 
-    $(elem).html('<img id="'+elem.id+'" class="'+str+'"src="assets/img/trainings/'+img+'"></img>'+comment[str+"s"]);
+    $(elem).html('<img id="'+elem.id+'" class="'+str+'"src="../assets/img/trainings/'+img+'"></img>'+comment[str+"s"]);
 
     localStorage.setItem("comments",JSON.stringify(commentArray));
     localStorage.setItem(str+"s",JSON.stringify(array));
@@ -711,7 +711,7 @@ function findRating(str,arr){
     });
 
 
-    $(elem).html('<img id="'+id+'"class="'+str+'"src="assets/img/trainings/'+img+'"></img>'+comment[str+"s"]);
+    $(elem).html('<img id="'+id+'"class="'+str+'"src="../assets/img/trainings/'+img+'"></img>'+comment[str+"s"]);
     localStorage.setItem(str+"s",JSON.stringify(array));
     localStorage.setItem("comments",JSON.stringify(commentArray));
     return array;
@@ -889,8 +889,8 @@ function appendComment(appendTo,name,content,likes,dislikes,replied,id){
   </span>\
   <p class="comment-txt more">'+content+'</p>\
   <div class="comment-meta">\
-    <button class="comment-like" id="lb'+id+'"><img class="like"src="assets/img/trainings/'+likesImage+'">'+likes+'</button>\
-    <button class="comment-dislike"id="dlb'+id+'"><img class="like"src="assets/img/trainings/'+dislikesImage+'">'+dislikes+'</button> \
+    <button class="comment-like" id="lb'+id+'"><img class="like"src="../assets/img/trainings/'+likesImage+'">'+likes+'</button>\
+    <button class="comment-dislike"id="dlb'+id+'"><img class="like"src="../assets/img/trainings/'+dislikesImage+'">'+dislikes+'</button> \
     <button class="comment-reply reply-popup" id="b'+id+'"><i class="fa fa-reply-all" aria-hidden="true"></i> Odgovori</button></div> \
   <div class="comment-box add-comment reply-box">\
     <span class="commenter-pic">\
