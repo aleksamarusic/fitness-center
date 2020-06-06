@@ -299,6 +299,9 @@ var scheduledTrainings =
 ]
 
 var months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+var serbianMonths = ["januar","februar","mart","april","maj","jun","jul","avgust","septembar","oktobar","novembar","decembar"]
+
+
 
 function loadScheduledTrainings(id) {
   /*var myScheduledTrainigs = new Array();
@@ -309,28 +312,42 @@ function loadScheduledTrainings(id) {
       myScheduledTrainigs = localStorage.getObj("myScheduledTrainigs");
     }
   }*/
-  var htmlCode = "<div class=\"table-responsive\"><table class=\"table table-bordred table-striped\"><thead><tr><th scope=\"col\">Date & time</th><th scope=\"col\">Free seats</th><th scope=\"col\">Reserve</th></tr></thead><tbody>";
+  var isEnglish = window.location.href.includes("/en/");
+  var htmlCode;
+  if (isEnglish)
+    htmlCode = "<div class=\"table-responsive\"><table class=\"table table-bordred table-striped\"><thead><tr><th scope=\"col\">Date & time</th><th scope=\"col\">Free seats</th><th scope=\"col\">Reserve</th></tr></thead><tbody>";
+  else
+    htmlCode = "<div class=\"table-responsive\"><table class=\"table table-bordred table-striped\"><thead><tr><th scope=\"col\">Datum i vreme</th><th scope=\"col\">Slobodna mesta</th><th scope=\"col\">Rezerviši</th></tr></thead><tbody>";
   var date = new Date(); 
   for (var i = 0; i < 7; i++) {
     htmlCode += "<tr><td>";
     date.setDate(date.getDate() + 1);
-    var month = months[date.getMonth()];
+    var month;
+    if (isEnglish)
+      month = months[date.getMonth()];
+    else
+      month = serbianMonths[date.getMonth()];
     var day = date.getDate();
     htmlCode+=day;
-    switch (day % 10) {
-      case 1: 
-        htmlCode+="st";
-        break;
-      case 2: 
-        htmlCode+="nd";
-        break;
-      case 3: 
-        htmlCode+="rd";
-        break;
-      default:
-        htmlCode+="th";
-        break;
+    if (isEnglish)
+    {
+      switch (day % 10) {
+        case 1: 
+          htmlCode+="st";
+          break;
+        case 2: 
+          htmlCode+="nd";
+          break;
+        case 3: 
+          htmlCode+="rd";
+          break;
+        default:
+          htmlCode+="th";
+          break;
+      }
     }
+    else
+      htmlCode += ".";
     indId = 0;
     var freeSeats = i * 2;
     while (scheduledTrainings[indId].id !== id) indId += 1;
@@ -343,12 +360,21 @@ function loadScheduledTrainings(id) {
     }
     if (isTrainigScheduled) {
       //console.log("sadrzi"+i);
-      htmlCode+=" "+month+"<br><hr>Start time: " + startTime + " <br><hr>End time: " + endTime + "</td><td id=\"" + buttonId + "-freeSeats\">" + (freeSeats - 1) + "</td><td><button id=\""+ buttonId +"\" type=\"button\" class=\"btn btn-primary\" onClick=\"reserveTraining(this.id)\" disabled>Reserve</button></td></tr>";
+      if (isEnglish)
+        htmlCode+=" "+month+"<br><hr>Start time: " + startTime + " <br><hr>End time: " + endTime + "</td><td id=\"" + buttonId + "-freeSeats\">" + (freeSeats - 1) + "</td><td><button id=\""+ buttonId +"\" type=\"button\" class=\"btn btn-primary\" onClick=\"reserveTraining(this.id)\" disabled>Reserve</button></td></tr>";
+      else
+        htmlCode+=" "+month+"<br><hr>Početno vreme: " + startTime + " <br><hr>Završno vreme: " + endTime + "</td><td id=\"" + buttonId + "-freeSeats\">" + (freeSeats - 1) + "</td><td><button id=\""+ buttonId +"\" type=\"button\" class=\"btn btn-primary\" onClick=\"reserveTraining(this.id)\" disabled>Rezerviši</button></td></tr>";
     }
     else {
-      htmlCode+=" "+month+"<br><hr>Start time: " + startTime + " <br><hr>End time: " + endTime + "</td><td id=\"" + buttonId + "-freeSeats\">" + freeSeats + "</td><td><button id=\""+ buttonId +"\" type=\"button\" class=\"btn btn-primary\" onClick=\"reserveTraining(this.id)\"";
+      if (isEnglish)
+        htmlCode+=" "+month+"<br><hr>Start time: " + startTime + " <br><hr>End time: " + endTime + "</td><td id=\"" + buttonId + "-freeSeats\">" + freeSeats + "</td><td><button id=\""+ buttonId +"\" type=\"button\" class=\"btn btn-primary\" onClick=\"reserveTraining(this.id)\"";
+      else
+        htmlCode+=" "+month+"<br><hr>Početno vreme: " + startTime + " <br><hr>Završno vreme: " + endTime + "</td><td id=\"" + buttonId + "-freeSeats\">" + freeSeats + "</td><td><button id=\""+ buttonId +"\" type=\"button\" class=\"btn btn-primary\" onClick=\"reserveTraining(this.id)\"";
       if (freeSeats == 0) htmlCode += " disabled";
-      htmlCode += ">Reserve</button></td></tr>";
+      if (isEnglish)
+        htmlCode += ">Reserve</button></td></tr>";
+      else
+        htmlCode += ">Rezerviši</button></td></tr>";
     }
     
   }  
@@ -407,7 +433,12 @@ function removeTrainingReservation(btn, id)
 
 function showMyScheduledTrainings () {
   var noScheduledTrainings = true;
-  var htmlCode = "<div class=\"table-responsive\"><table class=\"table table-bordred table-striped\"><thead><tr><th scope=\"col\">Training info</th><th scope=\"col\">Remove reservation</th></tr></thead><tbody>";
+  var isEnglish = window.location.href.includes("/en/");
+  var htmlCode;
+  if (isEnglish)
+    htmlCode = "<div class=\"table-responsive\"><table class=\"table table-bordred table-striped\"><thead><tr><th scope=\"col\">Training info</th><th scope=\"col\">Remove reservation</th></tr></thead><tbody>";
+  else
+    htmlCode = "<div class=\"table-responsive\"><table class=\"table table-bordred table-striped\"><thead><tr><th scope=\"col\">Informacije o treningu</th><th scope=\"col\">Obriši rezervaciju</th></tr></thead><tbody>";
   for (var i = 0; i < scheduledTrainings.length; i++) {
     var date = new Date(); 
     date.setDate(date.getDate() - 1);
@@ -416,7 +447,11 @@ function showMyScheduledTrainings () {
       date.setDate(date.getDate() + 1);
       //var month = months[date.getMonth()];
       var day = date.getDate();
-      var month = months[date.getMonth()];
+      var month;
+      if (isEnglish)
+        month = months[date.getMonth()];
+      else
+        month = serbianMonths[date.getMonth()];
       var startTime = scheduledTrainings[i]["Start-time"];
       var endTime = scheduledTrainings[i]["End-time"];
       buttonId = "" + scheduledTrainings[i].id + "-" + day + "-" + date.getMonth() + "-" + date.getFullYear();
@@ -429,30 +464,47 @@ function showMyScheduledTrainings () {
         //console.log("sadrzi"+i);
         htmlCode += "<tr><td>";
         htmlCode += scheduledTrainings[i].id.match(/[A-Z][a-z]+/g).join(" ");
-        htmlCode += "<br><hr>Date: " + day;
-        switch (day % 10) {
-          case 1: 
-            htmlCode+="st";
-            break;
-          case 2: 
-            htmlCode+="nd";
-            break;
-          case 3: 
-            htmlCode+="rd";
-            break;
-          default:
-            htmlCode+="th";
-            break;
+        if (isEnglish)
+        {
+          htmlCode += "<br><hr>Date: " + day;
+          switch (day % 10) {
+            case 1: 
+              htmlCode+="st";
+              break;
+            case 2: 
+              htmlCode+="nd";
+              break;
+            case 3: 
+              htmlCode+="rd";
+              break;
+            default:
+              htmlCode+="th";
+              break;
+          }
         }
-        htmlCode+=" "+month+"<br><hr>Start time: " + startTime + " <br><hr>End time: " + endTime + "</td><td><button type=\"button\" class=\"btn btn-primary\" onClick=\"removeTrainingReservation(this, '" + buttonId + "')\"";
+        else
+        {
+          htmlCode += "<br><hr>Datum: " + day + ".";
+        }
+        if (isEnglish)
+          htmlCode+=" "+month+"<br><hr>Start time: " + startTime + " <br><hr>End time: " + endTime + "</td><td><button type=\"button\" class=\"btn btn-primary\" onClick=\"removeTrainingReservation(this, '" + buttonId + "')\"";
+        else
+          htmlCode+=" "+month+"<br><hr>Početno vreme: " + startTime + " <br><hr>Završno vreme: " + endTime + "</td><td><button type=\"button\" class=\"btn btn-primary\" onClick=\"removeTrainingReservation(this, '" + buttonId + "')\"";
         if (j == 0 && parseInt(startTime.split(":")[0]) - date.getHours() == 1 && date.getMinutes() > 30) htmlCode += " disabled";
-        htmlCode += ">Remove</button></td></tr>";
+        if (isEnglish)
+          htmlCode += ">Remove</button></td></tr>";
+        else
+          htmlCode += ">Obriši</button></td></tr>";
       }
     }
   }
   htmlCode+="</tbody></table></div>";
   if (noScheduledTrainings) {
-    document.getElementById("accountScheduledTrainings").innerHTML = "<p style=\"margin-top: 2.5cm; margin-bottom: 2.5cm;\">There are no scheduled trainings.</p>";
+    if (isEnglish)
+      document.getElementById("accountScheduledTrainings").innerHTML = "<p style=\"margin-top: 2.5cm; margin-bottom: 2.5cm;\">There are no scheduled trainings.</p>";
+    else
+      document.getElementById("accountScheduledTrainings").innerHTML = "<p style=\"margin-top: 2.5cm; margin-bottom: 2.5cm;\">Nema zakazanih treninga.</p>";
+    
   }
   else {
     document.getElementById("accountScheduledTrainings").innerHTML = htmlCode;
